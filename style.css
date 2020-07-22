@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0
 }
+html { font-size: 62.5% }
 @media (prefers-color-scheme: dark) {
   html { background-color: black }
 }
@@ -14,13 +15,17 @@ body {
   flex-direction: column;
   height: 360px;
   justify-content: space-between;
-  margin: calc(50vh - 278px) auto 0 auto;
-  width: 360px
+  margin: calc(50vh - 180px) auto 0 auto;
+  width: 300px
 }
-@media (max-height: 638px) {
+@media (min-width: 415px) {
+  body { width: 360px }
+}
+@media (max-height: 450px) {
   body { margin-top: 0 }
 }
 div#logo {
+  cursor: pointer;
   height: 60px;
   left: 0;
   position: absolute;
@@ -45,8 +50,12 @@ main#paragraph {
 }
 p {
   color: hotpink;
+  font-size: 1.2rem;
   margin-bottom: 1.2rem;
   transform: rotate(2deg)
+}
+@media (min-width: 415px) {
+  p { font-size: 1.3rem }
 }
 ul {
   list-style: none;
@@ -59,10 +68,15 @@ h1,
 li {
   color: hotpink;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase
+}
+@media (min-width: 415px) {
+  a,
+  h1,
+  li { font-size: 3.2rem }
 }
 a:active,
 a:focus { outline: 0.25rem solid yellow }
@@ -78,6 +92,6 @@ a:focus { outline: 0.25rem solid yellow }
   }
   svg:hover { transform: skew(-12deg, 6deg) }
 }
-@media (not (hover)) {
+@media (hover: none) and (pointer: coarse) {
   main { display: block !important }
 }
