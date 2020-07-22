@@ -1,49 +1,83 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
 }
-
 @media (prefers-color-scheme: dark) {
-    html { background-color: #000 }
+  html { background-color: black }
 }
-
 @media (prefers-color-scheme: light) {
-    html { background-color: #fff }
+  html { background-color: white }
 }
-
 body {
-    display: flex;
-    flex-direction: column;
-    height: 370px;
-    justify-content: space-between;
-    margin: calc(50vh - 185px) auto 0 auto;
-    width: 370px
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: space-between;
+  margin: calc(50vh - 278px) auto 0 auto;
+  width: 360px
 }
-
+@media (max-height: 638px) {
+  body { margin-top: 0 }
+}
+div#logo {
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 60px
+}
 h1 {
-    order: 1;
-    text-align: right
+  cursor: pointer;
+  order: 2;
+  text-align: right
 }
-
 h1::before { content: '/ ' }
-
+span#title { display: inline-block }
+main#paragraph {
+  background-color: aquamarine;
+  font-family: monospace;
+  margin-left: auto;
+  order: 1;
+  padding: 1rem 0 0 1rem;
+  transform: rotate(-2deg);
+  width: 50%
+}
+p {
+  color: hotpink;
+  margin-bottom: 1.2rem;
+  transform: rotate(2deg)
+}
+ul {
+  list-style: none;
+  order: 0
+}
 li { display: inline }
-
 li:after { content: ' / ' }
-
 a,
 h1,
 li {
-    color: #f5539e;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase
+  color: hotpink;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase
 }
-
-ul {
-    list-style: none;
-    order: 0
+a:active,
+a:focus { outline: 0.25rem solid yellow }
+@media (hover: hover) {
+  div#logo:hover {
+    background-color: yellow;
+    transform: rotate(-6deg)
+  }
+  span:hover,
+  a:hover {
+    background-color: yellow;
+    font-style: italic
+  }
+  svg:hover { transform: skew(-12deg, 6deg) }
+}
+@media (not (hover)) {
+  main { display: block !important }
 }
