@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logo.addEventListener('mouseenter', () => biography.style.display = 'block' );
   logo.addEventListener('mouseleave', () => biography.style.display = 'none');
 
+  heading.innerText = heading.innerText.replace(/ /g, '_');
   heading.innerText = heading.innerText.replace(/\'/g, '/');
   heading.addEventListener('mouseenter', () => {
     heading.innerText = heading.innerText.replace(/\//g, '\\');
