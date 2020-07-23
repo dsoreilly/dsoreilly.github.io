@@ -39,7 +39,7 @@ h1 {
 }
 h1::before { content: '/ ' }
 span#title { display: inline-block }
-main#paragraph {
+main#biography {
   background-color: aquamarine;
   font-family: monospace;
   margin-left: auto;
