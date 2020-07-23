@@ -73,6 +73,10 @@ li {
   text-decoration: none;
   text-transform: uppercase
 }
+a { 
+  border-bottom: 0.35rem solid aquamarine;
+  display: inline-block;
+ }
 @media (min-width: 415px) {
   a,
   h1,
