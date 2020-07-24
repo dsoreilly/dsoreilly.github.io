@@ -52,7 +52,8 @@ p {
   color: hotpink;
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
-  transform: rotate(2deg)
+  transform: rotate(2deg);
+  word-break: keep-all;
 }
 @media (min-width: 415px) {
   p { font-size: 1.3rem }
