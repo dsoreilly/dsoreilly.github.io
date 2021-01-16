@@ -38,7 +38,10 @@ h1 {
   text-align: right
 }
 h1::before { content: '/ ' }
-span#title { display: inline-block }
+span#title {
+  display: inline-block;
+  padding-right: 1rem
+}
 main#biography {
   background-color: aquamarine;
   font-family: monospace;
