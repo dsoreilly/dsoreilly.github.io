@@ -74,10 +74,6 @@ a:active::before {
     width: 0
 }
 
-a:focus {
-    color: #ff69b4
-}
-
 nav ul {
     list-style: none;
     text-align: center
