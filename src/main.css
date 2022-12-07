@@ -1,14 +1,14 @@
 @tailwind base;
 
 @layer base {
-    @font-face {
-        font-family: 'Hubot Sans';
-        src:
-            url('Hubot-Sans.woff2') format('woff2 supports variations'),
-            url('Hubot-Sans.woff2') format('woff2-variations');
-        font-weight: 200 900;
-        font-stretch: 75% 125%;
-    }
+  @font-face {
+    font-family: 'Hubot Sans';
+    src:
+      url('Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
 }
 
 @tailwind components;
@@ -16,5 +16,5 @@
 
 .font-bold.font-display,
 .font-semibold.font-display {
-    font-stretch: 100%;
+  font-stretch: 100%;
 }
