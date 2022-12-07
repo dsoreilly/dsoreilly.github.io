@@ -1,6 +1,6 @@
 # dsoreilly.github.io
 
-Host for [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
+Hosting [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
 
 ## License
 
