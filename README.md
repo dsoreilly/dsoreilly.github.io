@@ -1,6 +1,6 @@
 # dsoreilly.github.io
 
-Hosting [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
+Hosts [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
 
 ## License
 
@@ -8,4 +8,5 @@ Open source under [MIT License](license)
 
 ## Attribution
 
-[Hubot Sans](https://github.com/github/hubot-sans) used under [Open Font License (OFL)](https://github.com/github/hubot-sans/blob/main/LICENSE)
+[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk/about) used under Open Font License (OFL)
+[Space Mono](https://fonts.google.com/specimen/Space+Mono/about) used under Open Font License (OFL)
