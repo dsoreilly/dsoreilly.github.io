@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:css && npm run build:html",
-    "build:css": "npx postcss ./src/main.css -o ./dist/main.min.css",
-    "build:html": "cp ./src/CNAME ./src/index.html ./dist",
+    "build": "npm run clean && npm run build:images && npm run build:css && npm run build:html",
+    "build:images": "mkdir -p ./dist/assets && cp -r ./src/images ./dist/assets/images",
+    "build:css": "npx postcss ./src/main.css -o ./dist/assets/main.min.css",
+    "build:html": "cp ./src/index.html ./dist",
+    "clean": "rm -rf ./dist/*",
     "deploy": "npm run build && npm run post-deploy",
-    "post-deploy": "npx prettier --write ./dist/index.html",
+    "dns": "cp ./src/CNAME ./dist",
+    "format": "npx prettier --write ./dist/index.html",
+    "post-deploy": "npm run format && npm run dns",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
