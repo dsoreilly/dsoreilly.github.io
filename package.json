@@ -27,7 +27,7 @@
     "postcss-load-config": "^4.0.1",
     "prettier": "3.0.0",
     "stylelint": "^14.16.1",
-    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^29.0.0"
   }
 }
