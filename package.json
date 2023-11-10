@@ -1,33 +1,16 @@
 {
-  "name": "dsoreilly.github.io",
-  "version": "1.0.0",
   "private": true,
+  "source": "src/index.html",
   "scripts": {
-    "build": "npm run clean && npm run build:images && npm run build:css && npm run build:html",
-    "build:images": "mkdir -p ./dist/assets && cp -r ./src/images ./dist/assets/images",
-    "build:css": "npx postcss ./src/main.css -o ./dist/assets/main.min.css",
-    "build:html": "cp ./src/index.html ./dist",
-    "clean": "rm -rf ./dist/*",
-    "deploy": "npm run build && npm run post-deploy",
-    "dns": "cp ./src/CNAME ./dist",
-    "format": "npx prettier --write ./dist/index.html",
-    "post-deploy": "npm run format && npm run dns",
+    "start": "parcel",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dsoreilly/dsoreilly.github.io.git"
-  },
-  "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "cssnano": "^6.0.1",
-    "postcss": "^8.4.27",
-    "postcss-cli": "^10.1.0",
-    "postcss-load-config": "^4.0.1",
-    "prettier": "3.0.0",
-    "stylelint": "^14.16.1",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^29.0.0"
+    "parcel": "^2.10.2",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwindcss": "^3.3.5"
   }
 }
