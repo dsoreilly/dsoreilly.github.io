@@ -1,60 +1,47 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en" class="bg-zinc-50 dark:bg-zinc-800">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Frontend engineer at The Telegraph" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frontend Engineer—London, UK" />
     <title>David O'Reilly</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-128.png" sizes="128x128" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
-    <link href="assets/main.min.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-128.png" sizes="128x128" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
-  <body class="body">
-    <main class="main">
-      <p class="p">
-        <span class="span">Hi, I'm David O'Reilly &#128075; ,</span> a frontend engineer based in London, currently <a class="a" href="https://github.com/telegraph" rel="nofollow noopener noreferrer" >@telegraph</a >.
+  <body>
+    <h1 class="sr-only">David O'Reilly</h1>
+    <main class="mx-auto flex max-w-sm flex-col px-3 pt-9">
+      <img
+        class="self-center rounded-full"
+        height="120"
+        width="120"
+        src="images/avatar.png"
+        srcset="images/avatar@2x.png 2x"
+        alt="photograph of me"
+      />
+      <p
+        class="mb-6 mt-9 font-sans text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100"
+      >
+        Frontend engineer based in London, UK.
       </p>
-      <p class="p">
-        I create delightful, engaging, and valuable user experiences using:
+      <p
+        class="font-sans text-base font-normal text-zinc-600 dark:text-zinc-400"
+      >
+        That means I write <span class="italic">a lot</span> of JavaScript.
+        Check out my
+        <a
+          class="underline hover:no-underline"
+          href="https://github.com/dsoreilly/"
+          rel="me noreferrer"
+          >GitHub</a
+        >
+        for an idea of what I do, or connect with me on
+        <a
+          class="underline hover:no-underline"
+          href="https://www.linkedin.com/in/dsoreilly/"
+          rel="me noreferrer"
+          >LinkedIn</a
+        >.
       </p>
     </main>
-    <section class="section">
-      <div class="browser">
-        <div class="browser-toolbar">
-          <span class="browser-toolbar-dot"></span>
-          <span class="browser-toolbar-dot"></span>
-          <span class="browser-toolbar-dot"></span>
-        </div>
-        <div class="browser-content">
-          <ul class="ul">
-            <li class="li">
-              <code class="code">*:css</code>
-            </li>
-            <li class="li">
-              <code class="code">javaScript();</code>
-            </li>
-            <li class="li">
-              <code class="code">&#60; /html&#62;</code>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <nav class="nav">
-        <a class="button" href="https://github.com/dsoreilly" rel="nofollow noopener noreferrer" >GitHub &#8594;</a>
-        <a class="button" href="https://www.linkedin.com/in/dsoreilly" rel="nofollow noopener noreferrer" >LinkedIn &#8594;</a>
-      </nav>
-    </section>
-    <a class="hidden" href="https://mastodon.social/@dsoreilly" rel="me" >Mastodon</a>
   </body>
 </html>
