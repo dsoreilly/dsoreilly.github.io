@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   content: ["./src/index.html"],
   theme: {
     fontFamily: {
