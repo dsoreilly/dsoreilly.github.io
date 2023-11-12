@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
