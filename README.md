@@ -2,7 +2,7 @@
 
 ![Deploy to GitHub Pages](https://github.com/dsoreilly/dsoreilly.github.io/actions/workflows/deploy-pages.yaml/badge.svg)
 
-Hosts [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
+hosts [https://dsoreilly.me](https://dsoreilly.me) :partly_sunny:
 
 ## License
 
