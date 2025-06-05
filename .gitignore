@@ -1,23 +1,6 @@
-# builds
-dist/
-
-# logs
-*.log
-
-# macOS
-.DS_Store
-.fseventsd
-
-# Node
-.node_repl_history
-.npm
-node_modules/
-npm-debug.log*
-
-# Parcel
-.parcel-cache/
-
-# VSCode
-.vscode/
-!.vscode/extensions.json
-!.vscode/settings.json
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+Gemfile.lock
+vendor
