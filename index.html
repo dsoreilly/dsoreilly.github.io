@@ -1,91 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>David O’Reilly</title>
-    <meta name="description" content="">
-    <link rel="canonical" href="https://dsoreilly.me/">
-    <!-- Fediverse verification -->
-    <meta name="fediverse:creator" content="@dsoreilly@mastodon.social">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://dsoreilly.me/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css"
+      integrity="sha512-XgCw4Srl8lC1ECwcaHwAU0WnxQwHkqmInzg9wJLtGB7DRuMaXPuK2k9WJ2AwRDGdrgK9eJpZl2hUlLi2WQssmw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fediverse verification -->
+    <meta name="fediverse:creator" content="@dsoreilly@mastodon.social" />
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
       body {
-        background-color: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 400;
-        font-size: 16px;
-        font-style: normal;
-        line-height: 1;
-        text-transform: lowercase;
-      }
-      main {
-        margin: 0 auto;
-        padding: 32px 16px 0;
+        font-family: "Hack", monospace;
+        /* font-size: 14px; */
+        padding: 1em;
+        max-width: 768px;
       }
       h1 {
-        font-weight: 400;
-        font-size: 16px;
-        font-style: normal;
-        margin-bottom: 32px;
-      }
-      hr {
-        border: none;
-        color: rgb(0, 0, 0);
-        margin-bottom: 32px;
-      }
-      hr::before {
-        content: "---";
-      }
-      p {
-        margin-bottom: 32px;
+        display: none;
       }
       ul {
-        list-style-position: inside;
-        list-style-type: "> ";
+        list-style: none;
+        padding: 0;
       }
-      ul > li {
-        margin-bottom: 16px;
-      }
-      a,
-      a:active,
-      a:visited {
-        color: rgb(0, 0, 238);
-        text-decoration: underline;
-      }
-      a:hover {
-        color: rgb(0, 0, 238);
-        text-decoration: none;
+      li {
+        margin-bottom: 1em;
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1><span>David O’Reilly</span></h1>
-      <hr>
-      <p>
-        Frontend engineer at The Telegraph.<br>I like books, coffee, and TypeScript.
-      </p>
-      <hr>
-      <nav>
-        <ul>
-          <li>blog <a href="https://mastodon.social/@dsoreilly">mastodon.social/@dsoreilly</a></li>
-          <li>code <a href="https://github.com/dsoreilly">github.com/dsoreilly</a></li>
-          <li>mail <a href="mailto:hello@dsoreilly.me">hello@dsoreilly.me</a></li>
-        </ul>
-      </nav>
-    </main>
-    <!-- Mastodon verification -->
-    <a rel="me" href="https://mastodon.social/@dsoreilly" style="display:none"></a>
-    <script></script>
+    <h1>David O’Reilly</h1>
+    <p>
+      Hey, I’m David, a frontend engineer based in London. I enjoy reading
+      books, drinking coffee, and writing TypeScript.
+    </p>
+    <p>Some places digital me exists:</p>
+    <nav>
+      <ul>
+        <li>🦋 <a href="https://bsky.app/profile/dsoreilly.me">Bluesky</a></li>
+        <li>🐙 <a href="https://github.com/dsoreilly">GitHub</a></li>
+        <li>📬 <a href="mailto:mail@dsoreilly.me">Mail</a></li>
+      </ul>
+    </nav>
+    <!-- mastodon verification -->
+    <a
+      rel="me"
+      href="https://mastodon.social/@dsoreilly"
+      style="display: none"
+    ></a>
   </body>
 </html>
