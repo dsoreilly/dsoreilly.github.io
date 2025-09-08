@@ -7,6 +7,7 @@
     <title>David O’Reilly</title>
     <meta name="description" content="" />
     <link rel="canonical" href="https://dsoreilly.me/" />
+    <!-- stylesheets -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -14,46 +15,46 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css"
-      integrity="sha512-XgCw4Srl8lC1ECwcaHwAU0WnxQwHkqmInzg9wJLtGB7DRuMaXPuK2k9WJ2AwRDGdrgK9eJpZl2hUlLi2WQssmw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="static/styles.css" />
     <!-- fediverse verification -->
     <meta name="fediverse:creator" content="@dsoreilly@mastodon.social" />
-    <style>
-      body {
-        font-family: "Hack", monospace;
-        padding: 1em;
-        max-width: 768px;
-      }
-      h1 {
-        display: none;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 1em;
-      }
-    </style>
   </head>
   <body>
+    <picture>
+      <source srcset="static/me.avif" type="image/avif" />
+      <source srcset="static/me.webp" type="image/webp" />
+      <img src="static/me.jpeg" alt="a photo of me!" width="150" height="150" />
+    </picture>
     <h1>David O’Reilly</h1>
-    <p>Hello, I’m David 👋</p>
     <p>
-      I’m a London based frontend engineer for a news media company, and I’m big
-      into books, coffee, and TypeScript.
+      Hello, world. I’m a frontend engineer based in London—currently at
+      <em>The Telegraph</em>—who likes solving problems with code. I focus on
+      creating delightful user experiences through collaboration with designers
+      and backend engineers, and support consistent and scalable product
+      development.
     </p>
-    <p>Here’s some places I exist:</p>
     <nav>
       <ul>
-        <li>🦋 <a href="https://bsky.app/profile/dsoreilly.me">Bluesky</a></li>
-        <li>🐙 <a href="https://github.com/dsoreilly">GitHub</a></li>
-        <li>📬 <a href="mailto:mail@dsoreilly.me">Mail</a></li>
+        <li>
+          <a href="https://bsky.app/profile/dsoreilly.me" rel="external"
+            >Bluesky</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/dsoreilly" rel="external">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/dsoreilly/" rel="external"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="mailto:mail@dsoreilly.me">Mail</a></li>
       </ul>
     </nav>
     <!-- mastodon verification -->
