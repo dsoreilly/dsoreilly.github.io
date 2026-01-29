@@ -1,0 +1,16 @@
+{
+  "name": "dsoreilly.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "pnpm eleventy --serve",
+    "build": "pnpm eleventy"
+  },
+  "author": "David O'Reilly",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
