@@ -4,8 +4,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "pnpm eleventy --serve",
-    "build": "pnpm eleventy"
+    "build": "pnpm eleventy",
+    "start": "pnpm eleventy --serve"
   },
   "author": "David O'Reilly",
   "license": "ISC",
