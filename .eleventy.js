@@ -1,4 +1,6 @@
 export default function (eleventyConfig) {
-  // Pass through CSS files.
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("fonts");
+
+  eleventyConfig.ignores.add("README.md");
 }
