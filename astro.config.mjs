@@ -34,7 +34,7 @@ export default defineConfig({
       weights: ["100 900"],
     },
   ],
-  site: "https://dsoreilly.github.io",
+  site: "https://dsoreilly.me",
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
