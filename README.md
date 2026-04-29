@@ -4,5 +4,7 @@ Hosts [dsoreilly.me](https://dsoreilly.me). ⛅️
 
 ## Attribution
 
-- Built with [11ty](https://www.11ty.dev/)
+- Built with [Astro](https://astro.build/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Typeset in [Fraunces](https://fraunces.undercase.xyz/)
+- Colour theme [Rosé Pine](https://rosepinetheme.com/)

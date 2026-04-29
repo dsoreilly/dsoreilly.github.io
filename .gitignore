@@ -1,21 +1,24 @@
-# Node.js
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
 node_modules/
-*.log
+
+# logs
 npm-debug.log*
-.pnpm-store/
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Eleventy
-_site/
 
-# Environment variables
+# environment variables
 .env
-.env.local
-.env.*.local
+.env.production
 
-# IDEs
-.idea/
-.vscode/
-
-# OS generated files
+# macOS-specific files
 .DS_Store
-Thumbs.db
+
+# jetbrains setting folder
+.idea/

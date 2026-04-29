@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-fraunces);
+}
+
+@theme {
+  --color-*: initial;
+  --color-dawn-base: hsl(32deg, 57%, 95%);
+  --color-dawn-surface: hsl(35deg, 100%, 98%);
+  --color-dawn-overlay: hsl(33deg, 43%, 91%);
+  --color-dawn-muted: hsl(257deg, 9%, 61%);
+  --color-dawn-subtle: hsl(248deg, 12%, 52%);
+  --color-dawn-text: hsl(248deg, 19%, 40%);
+  --color-dawn-love: hsl(343deg, 35%, 55%);
+  --color-dawn-gold: hsl(35deg, 81%, 56%);
+  --color-dawn-rose: hsl(3deg, 53%, 67%);
+  --color-dawn-pine: hsl(197deg, 53%, 34%);
+  --color-dawn-foam: hsl(189deg, 30%, 48%);
+  --color-dawn-iris: hsl(268deg, 21%, 57%);
+  --color-dawn-highlight-low: hsl(25deg, 35%, 93%);
+  --color-dawn-highlight-med: hsl(10deg, 9%, 86%);
+  --color-dawn-highlight-high: hsl(315deg, 4%, 80%);
+  --color-moon-base: hsl(246deg, 24%, 17%);
+  --color-moon-surface: hsl(248deg, 24%, 20%);
+  --color-moon-overlay: hsl(248deg, 21%, 26%);
+  --color-moon-muted: hsl(249deg, 12%, 47%);
+  --color-moon-subtle: hsl(248deg, 15%, 61%);
+  --color-moon-text: hsl(245deg, 50%, 91%);
+  --color-moon-love: hsl(343deg, 76%, 68%);
+  --color-moon-gold: hsl(35deg, 88%, 72%);
+  --color-moon-rose: hsl(2deg, 66%, 75%);
+  --color-moon-pine: hsl(197deg, 48%, 47%);
+  --color-moon-foam: hsl(189deg, 43%, 73%);
+  --color-moon-iris: hsl(267deg, 57%, 78%);
+  --color-moon-highlight-low: hsl(245deg, 22%, 20%);
+  --color-moon-highlight-med: hsl(247deg, 16%, 30%);
+  --color-moon-highlight-high: hsl(249deg, 15%, 38%);
+}
