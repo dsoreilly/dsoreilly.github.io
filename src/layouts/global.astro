@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+import { Font } from "astro:assets";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <Font cssVariable="--font-fraunces" />
+  </head>
+  <body
+    class="bg-dawn-base dark:bg-moon-base text-dawn-text dark:text-moon-text font-serif antialiased"
+  >
+    <div class="mx-auto mt-16 w-full max-w-lg px-4 lg:max-w-2xl lg:px-8">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<!-- 
+<style is:global>
+  /* *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: light-dark(#faf4ed, #232136);
+    color: light-dark(#575279, #e0def4);
+    color-scheme: light dark;
+    font-size: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-fraunces);
+    font-size: 1rem;
+  } */
+</style> -->
+
+<!-- <style>
+  body > div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 56em;
+    padding: 6em 1.5em;
+  }
+</style> -->
