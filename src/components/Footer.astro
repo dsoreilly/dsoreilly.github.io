@@ -1,0 +1,36 @@
+---
+import {
+  CreativeCommons,
+  ExternalLink,
+  Palette,
+  Rocket,
+  Type,
+} from "@lucide/astro";
+---
+
+<footer>
+  <div class="flex items-center justify-between py-12">
+    <ul class="text-rp-muted text-sm">
+      <li class="flex items-center">
+        <Rocket size="14" class="mr-1 inline-block" />
+        {Astro.generator}
+      </li>
+      <li class="flex items-center">
+        <Type size="14" class="mr-1 inline-block" />Atkinson Hyperlegible,
+        Fraunces
+      </li>
+      <li class="flex items-center">
+        <CreativeCommons size="14" class="mr-1 inline-block" />
+        <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          rel="noopener noreferrer"
+          class="underline"
+          >CC BY-SA 4.0 <ExternalLink size="14" class="inline-block" /></a
+        >
+      </li>
+      <li class="flex items-center">
+        <Palette size="14" class="mr-1 inline-block" />Rosé Pine
+      </li>
+    </ul>
+  </div>
+</footer>

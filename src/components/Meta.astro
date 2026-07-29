@@ -1,0 +1,40 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+import StatusIndicator from "./StatusIndicator.astro";
+
+interface Props {
+  title: string;
+  status: "sprouting" | "budding" | "evergreen";
+  datePublished: Date;
+  dateRevised?: Date;
+}
+
+const { title, status, datePublished, dateRevised } = Astro.props;
+---
+
+<h1 class="text-rp-text mb-8 font-serif text-4xl font-extrabold">
+  {title}
+</h1>
+<ul class="text-rp-text mb-12">
+  <li>
+    <span class="mr-1 inline-block w-4"
+      ><StatusIndicator status={status} /></span
+    >
+  </li>
+  <li>
+    <span class="mr-1 inline-block w-4"><em>p.</em></span><FormattedDate
+      date={datePublished}
+    />
+  </li>
+  {
+    dateRevised && (
+      <li>
+        <span class="mr-1 inline-block w-4">
+          <em>r.</em>
+        </span>
+        <FormattedDate date={dateRevised} />
+      </li>
+    )
+  }
+</ul>
+<hr class="border-rp-highlight-high mb-12 border-t" />

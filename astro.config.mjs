@@ -1,42 +1,166 @@
 // @ts-check
+
+import mdx from "@astrojs/mdx";
+import { satteri } from "@astrojs/markdown-satteri";
+import sitemap from "@astrojs/sitemap";
 import { defineConfig, fontProviders } from "astro/config";
+import expressiveCode from "astro-expressive-code";
 import tailwindcss from "@tailwindcss/vite";
+import { defineHastPlugin } from "satteri";
+
+const externalLinksHastPlugin = defineHastPlugin({
+  name: "externalLinks",
+  element: {
+    filter: ["a"],
+    visit(node, ctx) {
+      const href = node.properties.href;
+      if (typeof href === "string" && href.startsWith("http")) {
+        ctx.setProperty(node, "rel", "noopener noreferrer");
+        ctx.appendChild(node, {
+          type: "text",
+          value: " ",
+        });
+        ctx.appendChild(node, {
+          type: "element",
+          tagName: "svg",
+          properties: {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 24 24",
+            width: "16",
+            height: "16",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "2",
+            className: ["inline-block"],
+          },
+          children: [
+            {
+              type: "element",
+              tagName: "path",
+              properties: {
+                d: "M15 3h6v6",
+              },
+              children: [],
+            },
+            {
+              type: "element",
+              tagName: "path",
+              properties: {
+                d: "M10 14 21 3",
+              },
+              children: [],
+            },
+            {
+              type: "element",
+              tagName: "path",
+              properties: {
+                d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",
+              },
+              children: [],
+            },
+          ],
+        });
+      }
+    },
+  },
+});
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://example.com",
+  integrations: [expressiveCode(), mdx(), sitemap()],
+
   fonts: [
     {
-      cssVariable: "--font-fraunces",
+      provider: fontProviders.local(),
+      name: "Atkinson",
+      cssVariable: "--font-atkinson",
+      fallbacks: ["sans-serif"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/atkinson-regular.woff2"],
+            weight: 400,
+            style: "normal",
+            display: "swap",
+          },
+          {
+            src: ["./src/assets/fonts/atkinson-regular-italic.woff2"],
+            weight: 400,
+            style: "italic",
+            display: "swap",
+          },
+          {
+            src: ["./src/assets/fonts/atkinson-semibold.woff2"],
+            weight: 600,
+            style: "normal",
+            display: "swap",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
       name: "Fraunces",
-      provider: fontProviders.fontsource(),
-      styles: ["italic", "normal"],
-      unicodeRange: [
-        "U+0000-00FF",
-        "U+0131",
-        "U+0152-0153",
-        "U+02BB-02BC",
-        "U+02C6",
-        "U+02DA",
-        "U+02DC",
-        "U+0304",
-        "U+0308",
-        "U+0329",
-        "U+2000-206F",
-        "U+20AC",
-        "U+2122",
-        "U+2191",
-        "U+2193",
-        "U+2212",
-        "U+2215",
-        "U+FEFF",
-        "U+FFFD",
-      ],
-      weights: ["100 900"],
+      cssVariable: "--font-fraunces",
+      fallbacks: ["serif"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/fraunces-semibold.woff2"],
+            weight: 600,
+            style: "normal",
+            display: "swap",
+          },
+          {
+            src: ["./src/assets/fonts/fraunces-bold.woff2"],
+            weight: 700,
+            style: "normal",
+            display: "swap",
+          },
+          {
+            src: ["./src/assets/fonts/fraunces-extrabold.woff2"],
+            weight: 800,
+            style: "normal",
+            display: "swap",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
+      name: "JetBrains Mono",
+      cssVariable: "--font-jetbrains-mono",
+      fallbacks: ["monospace"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/jetbrains-mono-regular.woff2"],
+            weight: 400,
+            style: "normal",
+            display: "swap",
+          },
+          {
+            src: ["./src/assets/fonts/jetbrains-mono-regular-italic.woff2"],
+            weight: 400,
+            style: "italic",
+            display: "swap",
+          },
+        ],
+      },
     },
   ],
-  site: "https://dsoreilly.me",
+
+  markdown: {
+    processor: satteri({
+      hastPlugins: [externalLinksHastPlugin],
+      features: {
+        wikilinks: true,
+      },
+    }),
+  },
+
   vite: {
-    // @ts-ignore
     plugins: [tailwindcss()],
   },
 });

@@ -1,0 +1,60 @@
+---
+import { Moon, Sun } from "@lucide/astro";
+
+const labelDark = "Toggle light mode";
+const labelLight = "Toggle dark mode";
+---
+
+<button
+  type="button"
+  aria-label={labelDark}
+  aria-pressed="false"
+  data-theme-toggle
+  class="group hover:bg-rp-overlay rounded-md p-2"
+>
+  <Moon
+    size="16"
+    class="group-hover:text-rp-iris text-rp-text block dark:hidden"
+  />
+  <Sun
+    size="16"
+    class="group-hover:text-rp-iris text-rp-text hidden dark:block"
+  />
+  <span class="sr-only" data-theme-label>{labelDark}</span>
+</button>
+
+<script is:inline define:vars={{ labelDark, labelLight }}>
+  const storageKey = "theme";
+  const root = document.documentElement;
+  const button = document.querySelector("[data-theme-toggle]");
+  const label = button?.querySelector("[data-theme-label]");
+
+  const syncTheme = (theme) => {
+    const isDark = theme === "dark";
+    root.dataset.theme = theme;
+    if (button) {
+      button.setAttribute("aria-pressed", "true");
+      button.setAttribute("aria-label", isDark ? labelDark : labelLight);
+    }
+    if (label) {
+      label.textContent = isDark ? labelDark : labelLight;
+    }
+  };
+
+  try {
+    const stored = localStorage.getItem("theme");
+    const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+
+    syncTheme(stored === "dark" || stored === "light" ? stored : preferred);
+
+    button?.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+      localStorage.setItem(storageKey, nextTheme);
+      syncTheme(nextTheme);
+    });
+  } catch {
+    // Ignore storage failures and preserve the bootstrap theme.
+  }
+</script>
