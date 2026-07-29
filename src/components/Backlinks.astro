@@ -19,7 +19,7 @@ const backlinks = linkMap.get(noteId) || [];
       </h3>
       <ul class="list-disc ps-6.5">
         {backlinks.map((link) => (
-          <li class="marker:text-rp-muted ps-1.5">
+          <li class="marker:text-rp-muted my-2 ps-1.5">
             <a href={`/notes/${link.slug}/`} class="text-rp-iris underline">
               {link.title}
             </a>
