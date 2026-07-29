@@ -1,39 +1,88 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@theme inline {
-  --font-serif: var(--font-fraunces);
+@layer base {
+  :root {
+    --rp-base: #faf4ed;
+    --rp-surface: #fffaf3;
+    --rp-overlay: #f2e9e1;
+    --rp-muted: #9893a5;
+    --rp-subtle: #797593;
+    --rp-text: #575279;
+    --rp-love: #b4637a;
+    --rp-gold: #ea9d34;
+    --rp-rose: #d7827e;
+    --rp-pine: #286983;
+    --rp-foam: #56949f;
+    --rp-iris: #907aa9;
+    --rp-highlight-low: #f4ebe2;
+    --rp-highlight-med: #dfdad9;
+    --rp-highlight-high: #cecacd;
+  }
+
+  [data-theme="dark"] {
+    --rp-base: #191724;
+    --rp-surface: #1f1d2e;
+    --rp-overlay: #26233a;
+    --rp-muted: #6e6a86;
+    --rp-subtle: #908caa;
+    --rp-text: #e0def4;
+    --rp-love: #eb6f92;
+    --rp-gold: #f6c177;
+    --rp-rose: #ebbcba;
+    --rp-pine: #31748f;
+    --rp-foam: #9ccfd8;
+    --rp-iris: #c4a7e7;
+    --rp-highlight-low: #21202e;
+    --rp-highlight-med: #403d52;
+    --rp-highlight-high: #524f67;
+  }
 }
 
-@theme {
-  --color-*: initial;
-  --color-dawn-base: hsl(32deg, 57%, 95%);
-  --color-dawn-surface: hsl(35deg, 100%, 98%);
-  --color-dawn-overlay: hsl(33deg, 43%, 91%);
-  --color-dawn-muted: hsl(257deg, 9%, 61%);
-  --color-dawn-subtle: hsl(248deg, 12%, 52%);
-  --color-dawn-text: hsl(248deg, 19%, 40%);
-  --color-dawn-love: hsl(343deg, 35%, 55%);
-  --color-dawn-gold: hsl(35deg, 81%, 56%);
-  --color-dawn-rose: hsl(3deg, 53%, 67%);
-  --color-dawn-pine: hsl(197deg, 53%, 34%);
-  --color-dawn-foam: hsl(189deg, 30%, 48%);
-  --color-dawn-iris: hsl(268deg, 21%, 57%);
-  --color-dawn-highlight-low: hsl(25deg, 35%, 93%);
-  --color-dawn-highlight-med: hsl(10deg, 9%, 86%);
-  --color-dawn-highlight-high: hsl(315deg, 4%, 80%);
-  --color-moon-base: hsl(246deg, 24%, 17%);
-  --color-moon-surface: hsl(248deg, 24%, 20%);
-  --color-moon-overlay: hsl(248deg, 21%, 26%);
-  --color-moon-muted: hsl(249deg, 12%, 47%);
-  --color-moon-subtle: hsl(248deg, 15%, 61%);
-  --color-moon-text: hsl(245deg, 50%, 91%);
-  --color-moon-love: hsl(343deg, 76%, 68%);
-  --color-moon-gold: hsl(35deg, 88%, 72%);
-  --color-moon-rose: hsl(2deg, 66%, 75%);
-  --color-moon-pine: hsl(197deg, 48%, 47%);
-  --color-moon-foam: hsl(189deg, 43%, 73%);
-  --color-moon-iris: hsl(267deg, 57%, 78%);
-  --color-moon-highlight-low: hsl(245deg, 22%, 20%);
-  --color-moon-highlight-med: hsl(247deg, 16%, 30%);
-  --color-moon-highlight-high: hsl(249deg, 15%, 38%);
+@theme inline {
+  --font-sans: var(--font-atkinson);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --color-rp-base: var(--rp-base);
+  --color-rp-surface: var(--rp-surface);
+  --color-rp-overlay: var(--rp-overlay);
+  --color-rp-muted: var(--rp-muted);
+  --color-rp-subtle: var(--rp-subtle);
+  --color-rp-text: var(--rp-text);
+  --color-rp-love: var(--rp-love);
+  --color-rp-gold: var(--rp-gold);
+  --color-rp-rose: var(--rp-rose);
+  --color-rp-pine: var(--rp-pine);
+  --color-rp-foam: var(--rp-foam);
+  --color-rp-iris: var(--rp-iris);
+  --color-rp-highlight-low: var(--rp-highlight-low);
+  --color-rp-highlight-med: var(--rp-highlight-med);
+  --color-rp-highlight-high: var(--rp-highlight-high);
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@utility prose-rosepine {
+  --tw-prose-body: var(--rp-text);
+  --tw-prose-headings: var(--rp-text);
+  --tw-prose-lead: var(--rp-subtle);
+  --tw-prose-links: var(--rp-iris);
+  --tw-prose-bold: var(--rp-text);
+  --tw-prose-counters: var(--rp-muted);
+  --tw-prose-bullets: var(--rp-muted);
+  --tw-prose-hr: var(--rp-highlight-high);
+  --tw-prose-quotes: var(--rp-text);
+  --tw-prose-quote-borders: var(--rp-pine);
+  --tw-prose-captions: var(--rp-muted);
+  --tw-prose-code: var(--rp-rose);
+  --tw-prose-pre-code: var(--rp-text);
+  --tw-prose-pre-bg: var(--rp-surface);
+  --tw-prose-th-borders: var(--rp-highlight-med);
+  --tw-prose-td-borders: var(--rp-highlight-low);
+
+  /* Invert colors aren't needed if we handle it directly via the CSS vars above, 
+     but standard tailwind typography provides prose-invert. 
+     Since our vars automatically update based on data-theme="dark", 
+     we don't need a separate dark variant for these! */
 }

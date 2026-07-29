@@ -1,0 +1,30 @@
+---
+import { Leaf, Sprout, TreePine } from "@lucide/astro";
+
+const { status } = Astro.props;
+---
+
+{
+  status === "sprouting" && (
+    <>
+      <Sprout size="16" />
+      <span class="sr-only">Sprouting</span>
+    </>
+  )
+}
+{
+  status === "budding" && (
+    <>
+      <Leaf size="16" />
+      <span class="sr-only">Budding</span>
+    </>
+  )
+}
+{
+  status === "evergreen" && (
+    <>
+      <TreePine size="16" />
+      <span class="sr-only">Evergreen</span>
+    </>
+  )
+}

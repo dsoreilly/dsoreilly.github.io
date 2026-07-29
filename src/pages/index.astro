@@ -1,26 +1,27 @@
 ---
-import LayoutGlobal from "../layouts/global.astro";
+import Prose from "../components/Prose.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_TITLE } from "../consts";
+import FormattedDate from "../components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+
+const note = (await getCollection("notes")).sort(
+  (a, b) =>
+    (b.data.dateRevised?.valueOf() ?? b.data.datePublished.valueOf()) -
+    (a.data.dateRevised?.valueOf() ?? a.data.datePublished.valueOf()),
+)[0];
 ---
 
-<LayoutGlobal title="David O’Reilly">
-  <h1 class="mb-6 text-4xl font-bold tracking-tight lg:mb-7 lg:text-5xl">
-    David O’Reilly
-  </h1>
-  <section class="text-xl text-balance lg:text-2xl">
-    <p class="mb-3 lg:mb-4">
-      I’m a frontend engineer based in London currently at <cite class="italic">
-        The Telegraph
-      </cite>. I build delightful, user-focused marketing experiences across app
-      and web products.
-    </p>
+<BaseLayout title={SITE_TITLE}>
+  <Prose>
     <p>
-      You can find me <a
-        class="text-dawn-foam dark:text-moon-foam"
-        href="https://atproto.at/uri/at://did:plc:zmjbpkvqwwugwuxiof5itlxs"
-        rel="author external"
-      >
-        at://dsoreilly.me
-      </a> in the Atmosphere.
+      Inspired by the concept of the “digital garden,” this is a space where I
+      collect thoughts and cultivate ideas about software engineering amongst
+      other topics. Feel free to explore; these writings are in varying states
+      of completion, but you might stumble upon something interesting. You can
+      start here <a href={`/notes/${note.id}/`}
+        >{note.data.title} (<FormattedDate date={note.data.datePublished} />)</a
+      > and see where it takes you.
     </p>
-  </section>
-</LayoutGlobal>
+  </Prose>
+</BaseLayout>
