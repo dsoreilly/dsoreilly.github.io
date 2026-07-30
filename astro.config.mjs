@@ -67,7 +67,7 @@ const externalLinksHastPlugin = defineHastPlugin({
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://dsoreilly.me",
   integrations: [expressiveCode(), mdx(), sitemap()],
 
   fonts: [
