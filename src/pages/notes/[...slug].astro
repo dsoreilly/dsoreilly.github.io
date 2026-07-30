@@ -24,8 +24,8 @@ const { Content } = await render(note);
     <Meta
       title={note.data.title}
       status={note.data.status}
-      datePublished={note.data.datePublished}
-      dateRevised={note.data.dateRevised}
+      dateCreated={note.data.dateCreated}
+      dateUpdated={note.data.dateUpdated}
     />
     <Prose>
       <Content />

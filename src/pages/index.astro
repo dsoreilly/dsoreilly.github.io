@@ -7,8 +7,8 @@ import { getCollection } from "astro:content";
 
 const note = (await getCollection("notes")).sort(
   (a, b) =>
-    (b.data.dateRevised?.valueOf() ?? b.data.datePublished.valueOf()) -
-    (a.data.dateRevised?.valueOf() ?? a.data.datePublished.valueOf()),
+    (b.data.dateUpdated?.valueOf() ?? b.data.dateCreated.valueOf()) -
+    (a.data.dateUpdated?.valueOf() ?? a.data.dateCreated.valueOf()),
 )[0];
 ---
 
@@ -20,7 +20,9 @@ const note = (await getCollection("notes")).sort(
       other topics. Feel free to explore; these writings are in varying states
       of completion, but you might stumble upon something interesting. You can
       start here <a href={`/notes/${note.id}/`}
-        >{note.data.title} (<FormattedDate date={note.data.datePublished} />)</a
+        >{note.data.title} (<FormattedDate
+          date={note.data.dateUpdated ?? note.data.dateCreated}
+        />)</a
       > and see where it takes you.
     </p>
   </Prose>

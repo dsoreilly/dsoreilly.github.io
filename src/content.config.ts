@@ -11,8 +11,8 @@ const notes = defineCollection({
       title: z.string(),
       status: z.enum(["sprouting", "budding", "evergreen"]),
       // Transform string to Date object
-      datePublished: z.coerce.date(),
-      dateRevised: z.coerce.date().optional(),
+      dateCreated: z.coerce.date(),
+      dateUpdated: z.coerce.date().optional(),
     }),
 });
 

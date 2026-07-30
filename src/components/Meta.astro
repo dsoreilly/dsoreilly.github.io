@@ -5,11 +5,11 @@ import StatusIndicator from "./StatusIndicator.astro";
 interface Props {
   title: string;
   status: "sprouting" | "budding" | "evergreen";
-  datePublished: Date;
-  dateRevised?: Date;
+  dateCreated: Date;
+  dateUpdated?: Date;
 }
 
-const { title, status, datePublished, dateRevised } = Astro.props;
+const { title, status, dateCreated, dateUpdated } = Astro.props;
 ---
 
 <h1 class="text-rp-text mb-8 font-serif text-4xl font-extrabold">
@@ -17,22 +17,22 @@ const { title, status, datePublished, dateRevised } = Astro.props;
 </h1>
 <ul class="text-rp-text mb-12">
   <li>
-    <span class="mr-1 inline-block w-4"
+    <span class="mr-1 inline-block w-6"
       ><StatusIndicator status={status} /></span
     >
   </li>
   <li>
-    <span class="mr-1 inline-block w-4"><em>p.</em></span><FormattedDate
-      date={datePublished}
+    <span class="mr-1 inline-block w-6"><em>c.</em></span><FormattedDate
+      date={dateCreated}
     />
   </li>
   {
-    dateRevised && (
+    dateUpdated && (
       <li>
-        <span class="mr-1 inline-block w-4">
+        <span class="mr-1 inline-block w-6">
           <em>r.</em>
         </span>
-        <FormattedDate date={dateRevised} />
+        <FormattedDate date={dateUpdated} />
       </li>
     )
   }

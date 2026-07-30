@@ -1,7 +1,7 @@
 ---
 title: "Design Pattern"
 status: "sprouting"
-datePublished: "29 July 2026"
+dateCreated: "29 July 2026"
 ---
 
 > Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular design problem in your code.
