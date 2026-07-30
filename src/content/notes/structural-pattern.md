@@ -9,3 +9,4 @@ Structural patterns are [[/notes/design-pattern/|design patterns]] that offer so
 
 - [[/notes/adapter-pattern/|Adapter Pattern]]
 - [[/notes/decorator-pattern/|Decorator Pattern]]
+- [[/notes/facade-pattern/|Façade Pattern]]
