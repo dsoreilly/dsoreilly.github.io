@@ -2,15 +2,16 @@
 title: "State Pattern"
 status: "sprouting"
 dateCreated: "29 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
-The _state_ pattern is a [[/notes/behavioral-pattern|behavioral design pattern]] that enables an object to alter its functionality based on its internal state.
+The _state_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] that enables an object to alter its functionality based on its internal state.
 
 ## Example
 
-**Real-world analogy:** hardware behavior of a phone
+**Real-world analogy:** hardware behaviour of a phone
 
-[design-patterns/src/behavioral/state.ts on main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioral/state.ts)
+[design-patterns/src/behavioural/state.ts on main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioural/state.ts)
 
 ### State
 

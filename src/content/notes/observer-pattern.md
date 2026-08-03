@@ -2,15 +2,16 @@
 title: "Observer Pattern"
 status: "sprouting"
 dateCreated: "29 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
-The _observer_ pattern is a [[/notes/behavioral-pattern|behavioral design pattern]] for defining a publisher/subscriber relationship to notify multiple "subscribed" objects about "published" events.
+The _observer_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] for defining a publisher/subscriber relationship to notify multiple "subscribed" objects about "published" events.
 
 ## Example
 
 **Real-world analogy:** a magazine with subscribed readers
 
-[design-patterns/src/behavioral/observer.ts at main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioral/observer.ts)
+[design-patterns/src/behavioural/observer.ts at main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioural/observer.ts)
 
 ### Publisher
 

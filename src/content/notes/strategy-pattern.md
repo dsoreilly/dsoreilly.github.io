@@ -2,15 +2,16 @@
 title: "Strategy Pattern"
 status: "sprouting"
 dateCreated: "30 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
-The _strategy_ pattern is a [[/notes/behavioral-pattern|behavioral design pattern]] for allowing contextual pieces of logic to be used interchangeably.
+The _strategy_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] for allowing contextual pieces of logic to be used interchangeably.
 
 ## Example
 
 **Real-world analogy:** requesting an airport transfer
 
-[design-patterns/src/behavioral/strategy.ts on main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioral/strategy.ts)
+[design-patterns/src/behavioural/strategy.ts on main](https://github.com/dsoreilly/design-patterns/blob/main/src/behavioural/strategy.ts)
 
 ### Strategy
 
@@ -26,7 +27,7 @@ const taxiRequester: TransferRequester = () => ({ cost: "$$$", duration: 10 });
 
 ### Context
 
-The transfer requester is interchangable. When the airport transfer is requested, the transfer request is delegated to the specific requester.
+The transfer requester is interchangeable. When the airport transfer is requested, the transfer request is delegated to the specific requester.
 
 ```ts
 class AirportTransfer {
