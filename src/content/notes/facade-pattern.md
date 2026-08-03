@@ -1,7 +1,8 @@
 ---
-title: "Façade Pattern"
+title: "Façade pattern"
 status: "sprouting"
 dateCreated: "30 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
 The _façade_ pattern is a [[/notes/structural-pattern|structural design pattern]] that hides complex logic behind a simplified interface.

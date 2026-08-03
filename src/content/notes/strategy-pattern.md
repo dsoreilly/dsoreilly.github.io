@@ -1,5 +1,5 @@
 ---
-title: "Strategy Pattern"
+title: "Strategy pattern"
 status: "sprouting"
 dateCreated: "30 July 2026"
 dateUpdated: "03 August 2026"

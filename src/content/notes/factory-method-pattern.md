@@ -1,7 +1,8 @@
 ---
-title: "Factory Method Pattern"
+title: "Factory Method pattern"
 status: "sprouting"
 dateCreated: "29 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
 The _factory method_ pattern is a [[/notes/creational-pattern|creational design pattern]] for providing an interface for creating objects in a superclass, but allowing subclasses to alter the type of object that will be created.

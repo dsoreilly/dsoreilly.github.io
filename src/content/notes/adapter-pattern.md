@@ -1,7 +1,8 @@
 ---
-title: "Adapter Pattern"
+title: "Adapter pattern"
 status: "sprouting"
 dateCreated: "30 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
 The _adapter_ pattern is a [[/notes/structural-pattern|structural design pattern]] that allows incompatible objects to interface with one another.

@@ -1,5 +1,5 @@
 ---
-title: "State Pattern"
+title: "State pattern"
 status: "sprouting"
 dateCreated: "29 July 2026"
 dateUpdated: "03 August 2026"

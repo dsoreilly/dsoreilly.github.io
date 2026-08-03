@@ -1,5 +1,5 @@
 ---
-title: "Design Pattern"
+title: "Design pattern"
 status: "sprouting"
 dateCreated: "29 July 2026"
 dateUpdated: "03 August 2026"
@@ -11,6 +11,6 @@ dateUpdated: "03 August 2026"
 
 Each pattern tends to fall into one of the following three distinct categories:
 
-- [[/notes/behavioural-pattern/|Behavioural Pattern]]
-- [[/notes/creational-pattern/|Creational Pattern]]
-- [[/notes/structural-pattern/|Structural Pattern]]
+- [[/notes/behavioural-pattern/|Behavioural pattern]]
+- [[/notes/creational-pattern/|Creational pattern]]
+- [[/notes/structural-pattern/|Structural pattern]]

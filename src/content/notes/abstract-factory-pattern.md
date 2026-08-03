@@ -1,7 +1,8 @@
 ---
-title: "Abstract Factory Pattern"
+title: "Abstract Factory pattern"
 status: "sprouting"
 dateCreated: "30 July 2026"
+dateUpdated: "03 August 2026"
 ---
 
 The _abstract factory_ pattern is a [[/notes/creational-pattern|creational design pattern]] for creating different varieties of the same type of object.
