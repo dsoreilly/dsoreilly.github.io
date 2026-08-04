@@ -1,7 +1,7 @@
 ---
 title: "Impure function"
 status: "sprouting"
-dateCreated: "03 August 2026"
+dateCreated: "03 Aug 2026"
 ---
 
 A function is said to be "impure" if it is non-deterministic or can cause side effects. In contrast, a [[/notes/pure-function/|"pure" function]] is both deterministic and causes no side effects.

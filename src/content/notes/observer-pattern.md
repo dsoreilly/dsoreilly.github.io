@@ -1,8 +1,8 @@
 ---
 title: "Observer pattern"
 status: "sprouting"
-dateCreated: "29 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "29 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 The _observer_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] for defining a publisher/subscriber relationship to notify multiple "subscribed" objects about "published" events.

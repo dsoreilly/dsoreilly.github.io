@@ -1,8 +1,8 @@
 ---
 title: "Builder pattern"
 status: "sprouting"
-dateCreated: "30 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "30 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 The _builder_ pattern is a [[/notes/creational-pattern|creational design pattern]] for creating variations of objects step-by-step.

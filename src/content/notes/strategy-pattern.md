@@ -1,8 +1,8 @@
 ---
 title: "Strategy pattern"
 status: "sprouting"
-dateCreated: "30 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "30 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 The _strategy_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] for allowing contextual pieces of logic to be used interchangeably.

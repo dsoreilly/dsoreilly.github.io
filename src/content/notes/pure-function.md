@@ -1,7 +1,7 @@
 ---
 title: "Pure function"
 status: "sprouting"
-dateCreated: "03 August 2026"
+dateCreated: "03 Aug 2026"
 ---
 
 A function is said to be "pure" if it adheres to two key principles:

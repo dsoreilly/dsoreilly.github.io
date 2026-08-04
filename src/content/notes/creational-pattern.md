@@ -1,8 +1,8 @@
 ---
 title: "Creational pattern"
 status: "sprouting"
-dateCreated: "29 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "29 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 Creational patterns are [[/notes/design-pattern/|design patterns]] that offer solutions for how objects should be created. Commonly used creational patterns are the following:

@@ -1,8 +1,8 @@
 ---
 title: "Decorator pattern"
 status: "sprouting"
-dateCreated: "29 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "29 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 The _decorator_ pattern is a [[/notes/structural-pattern|structural design pattern]] for attaching additional functionality to existing objects by "wrapping" them in a new type of object.

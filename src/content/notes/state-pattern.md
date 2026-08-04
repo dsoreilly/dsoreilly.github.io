@@ -1,8 +1,8 @@
 ---
 title: "State pattern"
 status: "sprouting"
-dateCreated: "29 July 2026"
-dateUpdated: "03 August 2026"
+dateCreated: "29 Jul 2026"
+dateUpdated: "03 Aug 2026"
 ---
 
 The _state_ pattern is a [[/notes/behavioural-pattern|behavioural design pattern]] that enables an object to alter its functionality based on its internal state.
