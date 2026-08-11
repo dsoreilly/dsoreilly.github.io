@@ -2,15 +2,13 @@
 title: "Design pattern"
 status: "sprouting"
 dateCreated: "29 Jul 2026"
-dateUpdated: "03 Aug 2026"
+dateUpdated: "11 Aug 2026"
 ---
 
 > Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular design problem in your code.
 
 <cite>[Design Patterns](https://refactoring.guru/design-patterns/)</cite>
 
-Each pattern tends to fall into one of the following three distinct categories:
+## Example
 
-- [[/notes/behavioural-pattern/|Behavioural pattern]]
-- [[/notes/creational-pattern/|Creational pattern]]
-- [[/notes/structural-pattern/|Structural pattern]]
+Common design patterns implemented in _TypeScript_: [dsoreilly/design-patterns](https://github.com/dsoreilly/design-patterns/).
