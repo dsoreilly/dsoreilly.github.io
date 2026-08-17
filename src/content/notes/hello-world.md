@@ -2,28 +2,27 @@
 title: "Hello, world"
 status: "sprouting"
 dateCreated: "07 Aug 2026"
+dateUpdated: "17 Aug 2026"
 ---
 
 A _"hello, world"_ program's sole objective is to output the string `"hello, world"`. It is often used to measure the ease-of-use when comparing programming languages.
 
 ## Example
 
-### C
+A _"hello, world"_ program written in various languages.
 
-A _"hello, world"_ program written in 6 line(s) of code.
+_C_
 
 ```c
 #include <stdio.h>
 
-int main()
+void main()
 {
     printf("hello, world\n");
 }
 ```
 
-### Go
-
-A _"hello, world"_ program written in 7 line(s) of code.
+_Go_
 
 ```go
 package main
@@ -35,25 +34,19 @@ func main() {
 }
 ```
 
-### Haskell
-
-A _"hello, world"_ program written in 1 line(s) of code.
+_Haskell_
 
 ```hs
 main = putStrLn "hello, world"
 ```
 
-### Python
-
-A _"hello, world"_ program written in 1 line(s) of code.
+_Python_
 
 ```py
 print("hello, world")
 ```
 
-### Rust
-
-A _"hello, world"_ program written in 3 line(s) of code.
+_Rust_
 
 ```rs
 fn main() {

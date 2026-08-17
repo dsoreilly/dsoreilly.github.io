@@ -4,7 +4,7 @@ status: "sprouting"
 dateCreated: "05 Aug 2026"
 ---
 
-In programming, an _infinite loop_ is created when a sequence has one or more of the following attributes:
+In programming, an infinite loop is created when a sequence has one or more of the following attributes:
 
 1. no termination condition
 2. a termination condition that can never be met
