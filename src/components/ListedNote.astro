@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+import StatusIndicator from "./StatusIndicator.astro";
+
+type Props = CollectionEntry<"notes">;
+
+const note = Astro.props;
+---
+
+<li>
+  <a href={`/notes/${note.id}/`}>
+    <ul class="text-rp-text hover:text-rp-iris mb-12">
+      <li>
+        <span class="mr-1 inline-block w-6">
+          <StatusIndicator status={note.data.status} />
+        </span>
+        <span>{note.data.title}</span>
+      </li>
+      {
+        note.data.dateUpdated ? (
+          <li>
+            <span class="mr-1 inline-block w-6">
+              <em>r.</em>
+            </span>
+            <FormattedDate date={note.data.dateUpdated} />
+          </li>
+        ) : (
+          <li>
+            <span class="mr-1 inline-block w-6">
+              <em>c.</em>
+            </span>
+            <FormattedDate date={note.data.dateCreated} />
+          </li>
+        )
+      }
+    </ul>
+  </a>
+</li>

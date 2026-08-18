@@ -2,14 +2,6 @@
 import Prose from "../components/Prose.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE } from "../consts";
-import FormattedDate from "../components/FormattedDate.astro";
-import { getCollection } from "astro:content";
-
-const note = (await getCollection("notes")).sort(
-  (a, b) =>
-    (b.data.dateUpdated?.valueOf() ?? b.data.dateCreated.valueOf()) -
-    (a.data.dateUpdated?.valueOf() ?? a.data.dateCreated.valueOf()),
-)[0];
 ---
 
 <BaseLayout title={SITE_TITLE}>
@@ -19,11 +11,7 @@ const note = (await getCollection("notes")).sort(
       collect thoughts and cultivate ideas about software engineering amongst
       other topics. Feel free to explore; these writings are in varying states
       of completion, but you might stumble upon something interesting. You can
-      start here <a href={`/notes/${note.id}/`}
-        >{note.data.title} (<FormattedDate
-          date={note.data.dateUpdated ?? note.data.dateCreated}
-        />)</a
-      > and see where it takes you.
+      start at <a href="/notes/">recent notes</a> and see where it takes you.
     </p>
   </Prose>
 </BaseLayout>

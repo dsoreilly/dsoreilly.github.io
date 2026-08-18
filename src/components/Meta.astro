@@ -17,14 +17,15 @@ const { title, status, dateCreated, dateUpdated } = Astro.props;
 </h1>
 <ul class="text-rp-text mb-12">
   <li>
-    <span class="mr-1 inline-block w-6"
-      ><StatusIndicator status={status} /></span
-    >
+    <span class="mr-1 inline-block w-6">
+      <StatusIndicator status={status} />
+    </span>
   </li>
   <li>
-    <span class="mr-1 inline-block w-6"><em>c.</em></span><FormattedDate
-      date={dateCreated}
-    />
+    <span class="mr-1 inline-block w-6">
+      <em>c.</em>
+    </span>
+    <FormattedDate date={dateCreated} />
   </li>
   {
     dateUpdated && (

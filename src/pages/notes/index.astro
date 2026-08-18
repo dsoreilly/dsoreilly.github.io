@@ -1,0 +1,25 @@
+---
+// import Prose from "../components/Prose.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE_TITLE } from "../../consts";
+import { getCollection } from "astro:content";
+import ListedNote from "../../components/ListedNote.astro";
+
+const notes = (await getCollection("notes"))
+  .sort(
+    (a, b) =>
+      (b.data.dateUpdated ?? b.data.dateCreated).valueOf() -
+      (a.data.dateUpdated ?? a.data.dateCreated).valueOf(),
+  )
+  .slice(0, 5);
+---
+
+<BaseLayout title={SITE_TITLE}>
+  <h1 class="text-rp-text mb-12 font-serif text-4xl font-extrabold">
+    Recent notes
+  </h1>
+  <hr class="border-rp-highlight-high mb-12 border-t" />
+  <ul>
+    {notes.map((note) => <ListedNote {...note} />)}
+  </ul>
+</BaseLayout>
