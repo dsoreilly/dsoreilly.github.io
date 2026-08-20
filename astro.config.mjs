@@ -5,6 +5,7 @@ import { satteri } from "@astrojs/markdown-satteri";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig, fontProviders } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import mermaid from "astro-mermaid";
 import tailwindcss from "@tailwindcss/vite";
 import { defineHastPlugin } from "satteri";
 
@@ -68,7 +69,27 @@ const externalLinksHastPlugin = defineHastPlugin({
 // https://astro.build/config
 export default defineConfig({
   site: "https://dsoreilly.me",
-  integrations: [expressiveCode(), mdx(), sitemap()],
+  integrations: [
+    mermaid({
+      theme: "base",
+      autoTheme: false,
+      mermaidConfig: {
+        themeVariables: {
+          fontFamily: "var(--font-sans)",
+          primaryColor:
+            "#ebbcba" /* Rosé Pine Dark Rose - looks good on light and dark */,
+          primaryTextColor: "#191724" /* Dark base for readable text */,
+          primaryBorderColor: "#b4637a" /* Love */,
+          lineColor: "#6e6a86" /* Muted */,
+          secondaryColor: "#f6c177" /* Gold */,
+          tertiaryColor: "#c4a7e7" /* Iris */,
+        },
+      },
+    }),
+    expressiveCode(),
+    mdx(),
+    sitemap(),
+  ],
 
   fonts: [
     {
