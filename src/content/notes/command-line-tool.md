@@ -2,6 +2,7 @@
 title: "Command-line tool"
 status: "evergreen"
 dateCreated: "28 Aug 2026"
+dateUpdated: "24 Sep 2026"
 ---
 
 Useful built-in (_macOS_) command-line tools with examples.
@@ -17,7 +18,7 @@ Request the contents of `example.com`.
 ```sh
 $ curl example.com
 
-<!doctype html><html lang="en"><head><title>Example Domain</title><link rel="icon" href="data:,"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href="https://iana.org/domains/example">Learn more</a></p></div></body></html>
+<!doctype html><html lang="en"><head><title>Example Domain</title>...
 ```
 
 ## dig
@@ -45,6 +46,19 @@ _Global regular expression print_. Basic usage is for searching for text in a fi
 Search, ignoring case (`-i`), for any line that start with "hello" in the file `greeting.txt`.
 
 ```sh
-$ grep -i "^hello" greeting.txt
+$ grep -i '^hello' greeting.txt
 Hello, world!
+```
+
+## sed
+
+_Stream editor_. Basic usage is for transforming a text stream, such as from a text file, and apply a command.
+
+### Example
+
+Substitute (`s`) the word "world" for the word "you" in the text stream read from file `greeting.txt`.
+
+```sh
+$ sed 's/world/you/' greeting.txt
+Hello, you!
 ```
