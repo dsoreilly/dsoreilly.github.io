@@ -1,0 +1,74 @@
+---
+import type { Page, PaginateFunction } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { ArrowLeft, ArrowRight } from "@lucide/astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE_TITLE } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const notes = (await getCollection("notes")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+  return paginate(notes, { pageSize: 10 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"notes">>;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={SITE_TITLE}>
+  <h1 class="text-rp-text mb-8 font-serif text-4xl font-extrabold">Notes</h1>
+  <hr class="border-rp-highlight-high mb-12 border-t" />
+  <ul>
+    {
+      page.data.map((note) => (
+        <li class="mb-8">
+          <a
+            href={`/notes/${note.id}/`}
+            class="text-rp-text hover:text-rp-iris font-serif font-semibold"
+          >
+            <FormattedDate date={note.data.date} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="text-rp-subtle mt-8 flex justify-between">
+    {
+      page.url.prev ? (
+        <a
+          class="text-rp-text hover:text-rp-iris hover:bg-rp-overlay inline-flex items-center rounded-md p-2"
+          href={page.url.prev}
+        >
+          <ArrowLeft size="16" />
+          <span class="sr-only">Previous</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+    {
+      page.url.next ? (
+        <a
+          class="text-rp-text hover:text-rp-iris hover:bg-rp-overlay inline-flex items-center rounded-md p-2"
+          href={page.url.next}
+        >
+          <ArrowRight size="16" />
+          <span class="sr-only">Next</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+  </div>
+</BaseLayout>

@@ -1,9 +1,10 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import Backlinks from "../../components/Backlinks.astro";
-import Meta from "../../components/Meta.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import Prose from "../../components/Prose.astro";
+import Title from "../../components/Title.astro";
+import { formatDate } from "../../utils/format-date";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
@@ -19,14 +20,9 @@ const note = Astro.props;
 const { Content } = await render(note);
 ---
 
-<BaseLayout title={note.data.title}>
+<BaseLayout title={formatDate(note.data.date)}>
   <article>
-    <Meta
-      title={note.data.title}
-      status={note.data.status}
-      dateCreated={note.data.dateCreated}
-      dateUpdated={note.data.dateUpdated}
-    />
+    <Title date={note.data.date} />
     <Prose>
       <Content />
     </Prose>

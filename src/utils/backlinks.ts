@@ -2,7 +2,7 @@ import { getCollection } from "astro:content";
 
 export interface Backlink {
   slug: string;
-  title: string;
+  date: Date;
 }
 
 // Global cache so we only calculate this once during the build
@@ -33,6 +33,7 @@ export async function getBacklinkMap() {
       // This helper depends on how your URLs are structured.
       // If links are written as /notes/post-name, we clean it up:
       const targetId = targetPath
+        .split("#")[0]
         .replace(/^\//, "") // remove leading slash
         .replace(/^notes\//, "") // remove folder prefix if present
         .replace(/\/$/, ""); // remove trailing slash
@@ -48,7 +49,7 @@ export async function getBacklinkMap() {
         if (!backlinks.some((link) => link.slug === note.id)) {
           backlinks.push({
             slug: note.id,
-            title: note.data.title || note.id,
+            date: note.data.date,
           });
           map.set(targetNote.id, backlinks);
         }

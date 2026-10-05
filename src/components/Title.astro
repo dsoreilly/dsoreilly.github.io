@@ -1,0 +1,14 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<h1 class="text-rp-text mb-8 font-serif text-4xl font-extrabold">
+  <FormattedDate date={date} />
+</h1>
+<hr class="border-rp-highlight-high mb-12 border-t" />
