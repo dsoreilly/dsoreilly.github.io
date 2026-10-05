@@ -1,5 +1,6 @@
 ---
 import { getBacklinkMap } from "../utils/backlinks";
+import { formatDate } from "../utils/format-date";
 
 interface Props {
   noteId: string;
@@ -21,7 +22,7 @@ const backlinks = linkMap.get(noteId) || [];
         {backlinks.map((link) => (
           <li class="marker:text-rp-muted my-2 ps-1.5">
             <a href={`/notes/${link.slug}/`} class="text-rp-iris underline">
-              {link.title}
+              {formatDate(link.date)}
             </a>
           </li>
         ))}
